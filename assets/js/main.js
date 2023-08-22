@@ -21,10 +21,11 @@ function convertPokemonToLi(pokemon) {
             </div>
 
             <div class="moreDetails">
-                <span class="height">Height: ${pokemon.height}</span>
-                <span class="weight">Weight: ${pokemon.weight}</span>
+                <span><span class="miniTitle">About</span><span><hr /></span></span>
+                <span class="extras"><span class="extraTitle">Height</span><span class="extraText">${pokemon.height}</span></span>
+                <span class="extras"><span class="extraTitle">Weight</span><span class="extraText">${pokemon.weight}</span></span>
                 <ul class="abilities">
-                    ${pokemon.abilities.map((ability) => `<li class="ability">${ability}</li>`).join('')}
+                    <span>Abilities</span> <span class="miniContainer">${pokemon.abilities.map((ability) => `<li class="ability">${ability}</li>`).join(',')}</span>
                 </ul>
             </div>
         </li>
@@ -44,6 +45,7 @@ function loadPokemonItens(offset, limit) {
             pokeItem.addEventListener('click', (event) => {
                 const pokeItemMoreDetails = event.currentTarget.querySelector('.moreDetails')
                 pokeItemMoreDetails.classList.toggle('hidden')
+                pokeItemMoreDetails.classList.toggle('show')
             })
         })
     })

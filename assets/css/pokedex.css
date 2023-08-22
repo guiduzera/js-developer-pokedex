@@ -6,6 +6,10 @@
     list-style: none;
 }
 
+.pokemons:hover {
+    cursor: pointer;
+}
+
 .normal {
     background-color: #a6a877;
 }
@@ -144,6 +148,71 @@
     background-color: #6c79db;
     border: none;
     border-radius: 1rem;
+}
+
+.pagination button:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.moreDetails {
+    font-size: 0.75rem;
+    color: gray;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.miniContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.miniTitle {
+    color: #000;
+    font-weight: bold;
+}
+
+.moreDetails .abilities {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 0.6rem;
+    > span > li {
+        color: #000;
+        font-weight: bold;
+        list-style: none;
+    }
+}
+
+.extras {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+}
+
+.extraText {
+    color: #000;
+    font-weight: bold;
+}
+
+.extraTitle {
+    display: flex;
+    padding: 0;
 }
 
 @media screen and (min-width: 380px) {
